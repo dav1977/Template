@@ -17,7 +17,7 @@ namespace project.ViewModel
 
     public partial class MainWindow : Window
     {
-        QUIKSHARPconnector q;
+        
 
 
         public MainWindow()
@@ -26,13 +26,8 @@ namespace project.ViewModel
             this.Title = "Cobra Data Server v1.0";
 
             //Подписки
-            QUIKSHARPconnector.Event_Print += new Delegate_Print(add);
-            QUIKSHARPconnector.Event_CMD += new Delegate_Command(cmd);
-
-
-            q = new QUIKSHARPconnector();
-
-            RUN("");
+           // QUIKSHARPconnector.Event_Print += new Delegate_Print(add);
+         //   QUIKSHARPconnector.Event_CMD += new Delegate_Command(cmd);
 
 
             // use a timer to periodically update the memory usage
@@ -53,8 +48,6 @@ namespace project.ViewModel
             {
                 //----------------
 
-
-                q.start();
                 return "";
 
                 //----------------
